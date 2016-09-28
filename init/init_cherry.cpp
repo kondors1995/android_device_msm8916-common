@@ -124,23 +124,58 @@ void vendor_load_properties()
         property_set("ro.product.model", "Y550-L01");
         property_set("ro.product.device", "Y550-L01");
         property_set("ro.build.product", "Y550-L01");
-        property_set("ro.telephony.default_network", "9");
         property_set("ro.sf.lcd_density","240");
+        property_set("ro.telephony.default_network", "9");
     }
     /* Y550-L02 */
     else if (buf.find("Y550-L02") != std::string::npos) {
         property_set("ro.product.model", "Y550-L02");
         property_set("ro.product.device", "Y550-L02");
         property_set("ro.build.product", "Y550-L02");
-        property_set("ro.telephony.default_network", "9");
         property_set("ro.sf.lcd_density","240");
+        property_set("ro.telephony.default_network", "9");
     }
     /* Y550-L03 */
     else if (buf.find("Y550-L03") != std::string::npos) {
         property_set("ro.product.model", "Y550-L03");
         property_set("ro.product.device", "Y550-L03");
         property_set("ro.build.product", "Y550-L03");
-        property_set("ro.telephony.default_network", "9");
         property_set("ro.sf.lcd_density","240");
+        property_set("ro.telephony.default_network", "9");
+    }
+  /* Y635-L01 */
+    else if (buf.find("Y635-L01") != std::string::npos) {
+        property_set("ro.product.model", "Y635-L01");
+        property_set("ro.product.device", "Y635-L01");
+        property_set("ro.build.product", "Y635-L01");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y635-L02 */
+    else if (buf.find("Y635-L02") != std::string::npos) {
+        property_set("ro.product.model", "Y635-L02");
+        property_set("ro.product.device", "Y635-L02");
+        property_set("ro.build.product", "Y635-L02");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y635-L03 */
+    else if (buf.find("Y635-L03") != std::string::npos) {
+        property_set("ro.product.model", "Y635-L03");
+        property_set("ro.product.device", "Y635-L03");
+        property_set("ro.build.product", "Y635-L03");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y635-L11 */
+    else if (buf.find("Y635-L03") != std::string::npos) {
+        property_set("ro.product.model", "Y635-L11");
+        property_set("ro.product.device", "Y635-L11");
+        property_set("ro.build.product", "Y635-L11");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y635-L21 */
+    else if (buf.find("Y635-L21") != std::string::npos) {
+        property_set("ro.product.model", "Y635-L21");
+        property_set("ro.product.device", "Y635-L21");
+        property_set("ro.build.product", "Y635-L21");
+        property_set("ro.telephony.default_network", "9");
     }
 }
