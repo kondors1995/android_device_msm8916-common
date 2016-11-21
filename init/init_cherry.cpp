@@ -27,33 +27,38 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib>
-#include <fstream>
-#include <string>
+ #include <cstdlib>
+ #include <unistd.h>
+ #include <fstream>
+ #include <string>
 
-#include "vendor_init.h"
-#include "property_service.h"
-#include "log.h"
-#include "util.h"
+ #include <cutils/properties.h>
+ #include "vendor_init.h"
+ #include "log.h"
+ #include "util.h"
 
-#define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
+ #define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
 
-void vendor_load_properties()
-{
-    char platform[PROP_VALUE_MAX];
-    std::ifstream fin;
-    std::string buf;
-    int rc;
+ void vendor_load_properties()
+ {
+     char platform[PROP_VALUE_MAX];
+     std::ifstream fin;
+     std::string buf;
+     int rc;
 
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
-        return;
+     rc = property_get("ro.board.platform", platform, NULL);
+     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+         return;
 
-    fin.open("/proc/app_info");
-    while (getline(fin, buf))
-        if (buf.find("huawei_fac_product_name") != std::string::npos)
-            break;
-    fin.close();
+     fin.open("/proc/app_info", std::ios::in);
+     if (!fin)
+         return;
+
+     while (getline(fin, buf))
+         if (buf.find("huawei_fac_product_name") != std::string::npos)
+             break;
+     fin.close();
+
 
     /* C8817D */
     if (buf.find("C8817D") != std::string::npos) {
