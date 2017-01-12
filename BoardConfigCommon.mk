@@ -117,10 +117,8 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_SOURCE := kernel/huawei/Soviet-kernel
 TARGET_KERNEL_CONFIG := g620s_defconfig
-
-# SDClang
-TARGET_USE_SDCLANG := true
-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-6.x-uber/bin/arm-eabi-
+TARGET_GCC_VERSION_EXP := 4.9-uber
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
