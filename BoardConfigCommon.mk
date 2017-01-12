@@ -120,6 +120,9 @@ TARGET_KERNEL_CONFIG := g620s_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-6.x-uber/bin/arm-eabi-
 TARGET_GCC_VERSION_EXP := 4.9-uber
 
+# SDClang
+TARGET_USE_SDCLANG := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
