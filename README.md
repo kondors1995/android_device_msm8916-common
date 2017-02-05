@@ -1,6 +1,6 @@
 Copyright 2015 - The CyanogenMod Project
 
-Device configuration for Huawei Honor 4/4X.
+Device configuration for Huawei Y550.
 =====================================
 
 Basic   | Spec Sheet
@@ -14,9 +14,7 @@ Storage | 8 GB
 MicroSD | Up to 32 GB
 Battery | 2000 / 3000 mAh (non-removable)
 Dimensions | 142.95 x 72 x 8.5 mm / 152.9 x 77.2 x 8.65 mm
-Display | 720 x 1280 pixels, 5.0" / 5.5"
+Display | 480 x 854 pixels, 5.0" / 5.5"
 Rear Camera  | 8.0 / 13.0 MP, LED flash
 Front Camera | 2.0 / 5.0 MP
 Release Date | September 2014
-
-![Huawei Honor 4X](https://wiki.cyanogenmod.org/images/thumb/2/20/Cherry.png/314px-Cherry.png "Huawei Honor 4X")
