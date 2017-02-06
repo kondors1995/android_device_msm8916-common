@@ -117,8 +117,8 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_SOURCE := kernel/huawei/msm8916
 TARGET_KERNEL_CONFIG := cm_hwY550_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
-+TARGET_GCC_VERSION_EXP := 4.9
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-6.2.1-linaro/bin/arm-eabi-
++TARGET_GCC_VERSION_EXP := 4.9-uber
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
