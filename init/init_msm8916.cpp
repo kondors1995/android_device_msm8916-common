@@ -115,6 +115,7 @@ void vendor_load_properties()
         property_set("ro.product.model", "Y550-L01");
         property_set("ro.product.device", "Y550-L01");
         property_set("ro.build.product", "Y550-L01");
+        property_set("ro.telephony.default_network", "9");
         property_set("ro.build.description", "Y550-L01-user 4.4.4 GRJ90 C00B246 release-keys");
         property_set("ro.build.fingerprint", "Huawei/Y550-L01/hwY550-L01:4.4.4/HuaweiY550-L01/C00B246:user/ota-rel-keys,release-keys");
     }
@@ -123,6 +124,7 @@ void vendor_load_properties()
         property_set("ro.product.model", "Y550-L02");
         property_set("ro.product.device", "Y550-L02");
         property_set("ro.build.product", "Y550-L02");
+        property_set("ro.telephony.default_network", "9");
         property_set("ro.build.description", "Y550-L02-user 4.4.4 GRJ90 C346B247SP01 release-keys");
         property_set("ro.build.fingerprint", "Huawei/Y550-L02/hwY550-L02:4.4.4/HuaweiY550-L02/C346B247SP01:user/ota-rel-keys,release-keys");
     }
@@ -131,6 +133,7 @@ void vendor_load_properties()
         property_set("ro.product.model", "Y550-L03");
         property_set("ro.product.device", "Y550-L03");
         property_set("ro.build.product", "Y550-L03");
+        property_set("ro.telephony.default_network", "9");
         property_set("ro.build.description", "Y550-L03-user 4.4.4 GRJ90 C00B249 release-keys");
         property_set("ro.build.fingerprint", "Huawei/Y550-L03/hwY550-L03:4.4.4/HuaweiY550-L03/C00B249:user/ota-rel-keys,release-keys");
     }
