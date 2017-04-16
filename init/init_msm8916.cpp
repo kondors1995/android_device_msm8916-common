@@ -126,6 +126,44 @@ void vendor_load_properties()
         property_set("ro.build.description", "Y550-L03-user 4.4.4 GRJ90 C00B249 release-keys");
         property_set("ro.build.fingerprint", "Huawei/Y550-L03/hwY550-L03:4.4.4/HuaweiY550-L03/C00B249:user/ota-rel-keys,release-keys");
     }
+    else if (buf.find("Y635-L01") != std::string::npos) {
+      property_set("ro.product.model", "Y635-L01");
+      property_set("ro.product.name", "Y635-L01");
+      property_set("ro.product.device", "Y635-L01");
+      property_set("ro.build.product", "Y635-L01");
+      property_set("ro.build.description", "Y635-L01-user 4.4.4 GRJ90 C21B131 release-keys");
+      property_set("ro.build.fingerprint", "Huawei/Y635-L01/hwY635:4.4.4/HuaweiY635-L01/C21B131:user/release-keys");
+    }
+    /* Y635-L02 */
+    else if (buf.find("Y635-L02") != std::string::npos) {
+      property_set("ro.product.model", "Y635-L02");
+      property_set("ro.product.name", "Y635-L02");
+      property_set("ro.product.device", "Y635-L02");
+      property_set("ro.build.product", "Y635-L02");
+    }
+    /* Y635-L03 */
+    else if (buf.find("Y635-L03") != std::string::npos) {
+      property_set("ro.product.model", "Y635-L03");
+      property_set("ro.product.name", "Y635-L03");
+      property_set("ro.product.device", "Y635-L03");
+      property_set("ro.build.product", "Y635-L03");
+      property_set("ro.build.description", "Y635-L03-user 4.4.4 GRJ90 C69B003 release-keys");
+      property_set("ro.build.fingerprint", "Huawei/Y635-L03/hwY635:4.4.4/HuaweiY635-L03/C69B003:user/release-keys");
+    }
+    /* Y635-L11 */
+    else if (buf.find("Y635-L11") != std::string::npos) {
+        property_set("ro.product.model", "Y635-L11");
+        property_set("ro.product.name", "Y635-L11");
+        property_set("ro.product.device", "Y635-L11");
+        property_set("ro.build.product", "Y635-L11");
+    }
+    /* Y635-L21 */
+    else if (buf.find("Y635-L21") != std::string::npos) {
+        property_set("ro.product.model", "Y635-L21");
+        property_set("ro.product.name", "Y635-L21");
+        property_set("ro.product.device", "Y635-L21");
+        property_set("ro.build.product", "Y635-L21");
+    }
     /* Che1-CL10 */
     else if (buf.find("Che1-CL10") != std::string::npos) {
         property_set("ro.product.model", "Che1-CL10");
