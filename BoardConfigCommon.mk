@@ -61,6 +61,9 @@ TARGET_KERNEL_CONFIG := cm_hwY550_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.9-uber/bin/arm-eabi-
 TARGET_GCC_VERSION_EXP := 4.9-uber
 
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -82,13 +85,10 @@ TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
 
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += $(VENDOR_PATH)
-#RECOVERY_VARIANT := twrp
-ifneq ($(RECOVERY_VARIANT),twrp)
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/recovery/recovery.fstab
-else
+RECOVERY_VARIANT := twrp
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/recovery/twrp.fstab
 RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
-DEVICE_RESOLUTION := 720x1280
+DEVICE_RESOLUTION := 480x854
 RECOVERY_SDCARD_ON_DATA := true
 TW_NEW_ION_HEAP := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
@@ -97,7 +97,6 @@ TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "accelerometer\x0alis3dh-accel"
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-endif
 
 # RIL
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11
